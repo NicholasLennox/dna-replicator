@@ -4,7 +4,7 @@ let Replicator = require('./libs/replicator');
 async function main() {
 
     // Create initial replicator
-    const replicatorZero = new Replicator('ATCGAATC', 0.01);
+    const replicatorZero = new Replicator('ATCGAATC', 0.5);
 
     // Create a structure to hold the population
     const population = [];

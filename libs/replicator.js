@@ -8,19 +8,37 @@
     Each nucleotide is like one letter in a long instruction manual.
 */
 class Replicator {
+    /**
+     * @param {string} genome
+     * @param { number } mutationRate
+     */
     constructor(genome, mutationRate) {
-        this.genome = genome; // An array of genes
+        /** @type { string } */
+        this.genome = genome; // String of genes
+        /** @type { number } */
         this.mutationRate = mutationRate; // Probability of mutation during replication
     }
 
     // Retruns new replicator instance
     replicate() {
-        return new Replicator(this.genome,this.mutationRate);
+        // Mutation check
+        if (Math.random() < this.mutationRate) {
+            const newGenmone = this._mutateGene();
+            return new Replicator(newGenmone, this.mutationRate);
+        } else {
+            return new Replicator(this.genome, this.mutationRate);
+        }
     }
 
     // Private, on chance when replicating
     _mutateGene() {
 
+        let mutated = this.genome + '_mutated';
+
+        // Random index to mutate
+        const indexToMutate = Math.random() * this.genome.length;
+
+        return mutated;
     }
 }
 
