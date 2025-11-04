@@ -1,0 +1,22 @@
+{
+  "name": "dna-replicator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasLennox/dna-replicator.git"
+  },
+  "keywords": ["DNA", "Replicator", "Biology", "Genetics", "Science", "Algorithm", "Simulation"],
+  "author": "Nicholas Lennox",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NicholasLennox/dna-replicator/issues"
+  },
+  "homepage": "https://github.com/NicholasLennox/dna-replicator#readme"
+}
