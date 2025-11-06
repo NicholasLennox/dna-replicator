@@ -4,11 +4,17 @@ const path = require('path');
 
 async function main() {
 
+    // Empty logs folder
+    const logsDir = path.join(__dirname, 'logs');
+    fs.rmdirSync(logsDir, {recursive: true, force: true});
+    fs.mkdirSync(logsDir);
+
     // Create initial replicator
     const replicatorZero = new Replicator('ATCGAATC', 0.1);
 
     // Create a structure to hold the population
     const population = [];
+    const populationSnapshots = []; // each epochs distribution
     population.push(replicatorZero);
 
     // Epochs
@@ -30,6 +36,11 @@ async function main() {
             population.push(replicator.replicate());
         });
 
+        // Snapshot population distribution
+        let currentSnapshotMap = new Map();
+        population.forEach(rep => currentSnapshotMap.set(rep.genome, isNaN(currentSnapshotMap.get(rep.genome)) ? 1 : currentSnapshotMap.get(rep.genome) + 1));
+        populationSnapshots.push(currentSnapshotMap);
+
         // Pause for dramatic effect
         await new Promise(r => setTimeout(r, DRAMA_EFFECT));
     }
@@ -48,7 +59,7 @@ async function main() {
         populationDistribution.set(
             replicator.genome, 
             isNaN(populationDistribution.get(replicator.genome)) ? 
-                0 
+                1 
                 : 
                 populationDistribution.get(replicator.genome) + 1);
         // console.log(populationDistribution.get(replicator.genome));
@@ -58,22 +69,23 @@ async function main() {
     let totalReplicators = (Array.from(populationDistribution.values()))
                             .reduce((a,b) => b + a);
 
-    // console.log(`\nTotal replicators: ${totalReplicators}`);
-    // console.log('\nPopulation distribution\n=======================\n');
-    // console.log(populationDistribution);
+    // Debug zone
+    let testSnapshots = populationSnapshots.map(snapshot => Array.from(snapshot, ([key, value]) => ({genome: key, count: value})));
+    //console.log(testSnapshots);
+    
 
-    // Save to JSON log
+    // Log file details
     const fileName = `replicators_${(new Date()).toISOString().replaceAll(':','-').slice(0, 16)}.json`; // : dont work nice in windows so we need to change it
-    const pathToLogFile = path.join(__dirname, 'logs', fileName);
+    const pathToLogFile = path.join(logsDir, fileName);
     let formattedLog = {
         date: fileName.split('_')[1],
-        replicas: totalReplicators,
-        distribution: Array.from(populationDistribution, (entry) => ({ genome: entry[0], count: entry[1]})) // Array.from takes a mapping arguement (2nd)
+        totalReplicators,
+        distictReplicators: populationDistribution.size,
+        finalDistribution: Array.from(populationDistribution, (entry) => ({ genome: entry[0], count: entry[1]})),
+        populationSnapshots: populationSnapshots.map(snapshot => Array.from(snapshot, ([key, value]) => ({genome: key, count: value}))),
     };
     fs.writeFileSync(pathToLogFile, JSON.stringify(formattedLog, null, 2));
     console.log(formattedLog);
-    
-
 }
 
 main()
