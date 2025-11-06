@@ -1,0 +1,22 @@
+{
+  "date": "2025-11-06T09-17.json",
+  "replicas": 1020,
+  "distribution": [
+    {
+      "genome": "ATCGAATC",
+      "count": 668
+    },
+    {
+      "genome": "ATCGAATC_mutated",
+      "count": 287
+    },
+    {
+      "genome": "ATCGAATC_mutated_mutated",
+      "count": 60
+    },
+    {
+      "genome": "ATCGAATC_mutated_mutated_mutated",
+      "count": 5
+    }
+  ]
+}
