@@ -68,8 +68,7 @@ async function main() {
     let populationDistribution = countGroupings(population);
 
     // Total count
-    let totalCount = (Array.from(populationDistribution.values()))
-        .reduce((a, b) => b + a);
+    let totalCount = populationDistribution.reduce((total, group) => total += group.count);
 
 
     // Log file details
@@ -78,9 +77,9 @@ async function main() {
     let formattedLog = {
         date: fileName.split('_')[1],
         totalReplicators: totalCount,
-        distictReplicators: populationDistribution.size,
-        finalDistribution: Array.from(populationDistribution, ([key, value]) => ({genome: key, count: value})),
-        populationSnapshots: populationSnapshots.map(snapshot => ({ epoch: snapshot.epoch, groups: snapshot.groups.size, groupsDetails: Array.from(snapshot.groups, ([key, value]) => ({genome: key, count: value}))})),
+        distictReplicators: populationDistribution.length,
+        finalDistribution: populationDistribution,
+        populationSnapshots: populationSnapshots.map(snapshot => ({ epoch: snapshot.epoch, groups: snapshot.groups.length, groupsDetails: snapshot.groups })),
     };
     fs.writeFileSync(pathToLogFile, JSON.stringify(formattedLog, null, 2));
 
@@ -98,7 +97,7 @@ function countGroupings(populationArr) {
             isNaN(currVal) ? 1 : currVal + 1
         )
     })
-    return groupingsMap;
+    return Array.from(groupingsMap, ([key, value]) => ({genome: key, count: value}))
 }
 
 main()
