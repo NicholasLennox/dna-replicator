@@ -11,7 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/NicholasLennox/dna-replicator.git"
   },
-  "keywords": ["DNA", "Replicator", "Biology", "Genetics", "Science", "Algorithm", "Simulation"],
+  "keywords": [
+    "DNA",
+    "Replicator",
+    "Biology",
+    "Genetics",
+    "Science",
+    "Algorithm",
+    "Simulation"
+  ],
   "author": "Nicholas Lennox",
   "license": "ISC",
   "type": "commonjs",

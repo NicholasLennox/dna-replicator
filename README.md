@@ -41,3 +41,18 @@ At its core:
 
 Everything else — survival, mutation, selection — emerges from how those rules interact.
 
+## 🧬 Ways a genome can change
+
+1. **Substitution** – change one nucleotide (what you’re already doing).
+   `"ATCG"` → `"ATTG"`
+
+2. **Insertion** – add a random base somewhere.
+   `"ATCG"` → `"ATACG"`
+
+3. **Deletion** – remove one base.
+   `"ATCG"` → `"ACG"`
+
+4. **Duplication** – copy a whole section.
+   `"ATCG"` → `"ATCGCG"`
+
+Each of these increases or decreases the length.

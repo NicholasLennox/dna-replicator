@@ -31,15 +31,22 @@ class Replicator {
     }
 
     // Private, on chance when replicating
+    // Does not change current instances genome, just what the copy will be made with (simulates on replication mutation)
     _mutateGene() {
-
-        let mutated = this.genome + '_mutated';
-
         // Random index to mutate
-        const indexToMutate = Math.random() * this.genome.length;
+        const indexToMutate = Math.round(Math.random() * this.genome.length);
+        // Random letter to change to
+        const newLetter = 'ATCG'[Math.round(Math.random()*3)]
+        // Make the change
+        let childGenome = replaceAt(this.genome, indexToMutate, newLetter);
+        // console.log(`Parent genome: ${this.genome}, Child genome: ${childGenome}`);
 
-        return mutated;
+        return childGenome;
     }
+}
+
+function replaceAt(word, i, replace) {
+    return word.slice(0,i) + replace + word.slice(i+1,word.length);
 }
 
 module.exports = Replicator;
