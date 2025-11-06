@@ -79,8 +79,8 @@ async function main() {
         date: fileName.split('_')[1],
         totalReplicators: totalCount,
         distictReplicators: populationDistribution.size,
-        finalDistribution: Array.from(populationDistribution, (entry) => ({ genome: entry[0], count: entry[1] })),
-        populationSnapshots: populationSnapshots.map(snapshot => ({ epoch: snapshot.epoch, groups: snapshot.groups.size, groupsDetails: Array.from(snapshot.groups, ([key, value]) => ({ genome: key, count: value}))})),
+        finalDistribution: Array.from(populationDistribution, ([key, value]) => ({genome: key, count: value})),
+        populationSnapshots: populationSnapshots.map(snapshot => ({ epoch: snapshot.epoch, groups: snapshot.groups.size, groupsDetails: Array.from(snapshot.groups, ([key, value]) => ({genome: key, count: value}))})),
     };
     fs.writeFileSync(pathToLogFile, JSON.stringify(formattedLog, null, 2));
 
