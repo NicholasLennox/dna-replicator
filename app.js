@@ -6,7 +6,7 @@ async function main() {
 
     // Empty logs folder
     const logsDir = path.join(__dirname, 'logs');
-    fs.rmdirSync(logsDir, {recursive: true, force: true});
+    fs.rmdirSync(logsDir, { recursive: true, force: true });
     fs.mkdirSync(logsDir);
 
     // Create initial replicator
@@ -37,9 +37,7 @@ async function main() {
         });
 
         // Snapshot population distribution
-        let currentSnapshotMap = new Map();
-        population.forEach(rep => currentSnapshotMap.set(rep.genome, isNaN(currentSnapshotMap.get(rep.genome)) ? 1 : currentSnapshotMap.get(rep.genome) + 1));
-        populationSnapshots.push(currentSnapshotMap);
+        populationSnapshots.push(countGroupings(population));
 
         // Pause for dramatic effect
         await new Promise(r => setTimeout(r, DRAMA_EFFECT));
@@ -52,40 +50,41 @@ async function main() {
             Key: replicator.genome
             Value: running total, starting at 0
     */
-    let populationDistribution = new Map();
-    population.forEach(replicator => {
-        // console.log(populationDistribution.get(replicator.genome));
-        // console.log(isNaN(populationDistribution.get(replicator.genome)));
-        populationDistribution.set(
-            replicator.genome, 
-            isNaN(populationDistribution.get(replicator.genome)) ? 
-                1 
-                : 
-                populationDistribution.get(replicator.genome) + 1);
-        // console.log(populationDistribution.get(replicator.genome));
-    });
+    let populationDistribution = countGroupings(population);
 
     // Total count
     let totalReplicators = (Array.from(populationDistribution.values()))
-                            .reduce((a,b) => b + a);
+        .reduce((a, b) => b + a);
 
     // Debug zone
-    let testSnapshots = populationSnapshots.map(snapshot => Array.from(snapshot, ([key, value]) => ({genome: key, count: value})));
+    let testSnapshots = populationSnapshots.map(snapshot => Array.from(snapshot, ([key, value]) => ({ genome: key, count: value })));
     //console.log(testSnapshots);
-    
+
 
     // Log file details
-    const fileName = `replicators_${(new Date()).toISOString().replaceAll(':','-').slice(0, 16)}.json`; // : dont work nice in windows so we need to change it
+    const fileName = `replicators_${(new Date()).toISOString().replaceAll(':', '-').slice(0, 16)}.json`; // : dont work nice in windows so we need to change it
     const pathToLogFile = path.join(logsDir, fileName);
     let formattedLog = {
         date: fileName.split('_')[1],
         totalReplicators,
         distictReplicators: populationDistribution.size,
-        finalDistribution: Array.from(populationDistribution, (entry) => ({ genome: entry[0], count: entry[1]})),
-        populationSnapshots: populationSnapshots.map(snapshot => Array.from(snapshot, ([key, value]) => ({genome: key, count: value}))),
+        finalDistribution: Array.from(populationDistribution, (entry) => ({ genome: entry[0], count: entry[1] })),
+        populationSnapshots: populationSnapshots.map(snapshot => Array.from(snapshot, ([key, value]) => ({ genome: key, count: value }))),
     };
     fs.writeFileSync(pathToLogFile, JSON.stringify(formattedLog, null, 2));
     console.log(formattedLog);
+}
+
+function countGroupings(populationArr) {
+    let groupingsMap = new Map();
+    populationArr.forEach(e => {
+        let currVal = groupingsMap.get(e.genome)
+        groupingsMap.set(
+            e.genome,
+            isNaN(currVal) ? 1 : currVal + 1
+        )
+    })
+    return groupingsMap;
 }
 
 main()

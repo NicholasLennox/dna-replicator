@@ -1,23 +1,23 @@
 {
-  "date": "2025-11-06T10-52.json",
+  "date": "2025-11-06T11-08.json",
   "totalReplicators": 1024,
   "distictReplicators": 4,
   "finalDistribution": [
     {
       "genome": "ATCGAATC",
-      "count": 699
+      "count": 716
     },
     {
       "genome": "ATCGAATC_mutated",
-      "count": 265
+      "count": 260
     },
     {
       "genome": "ATCGAATC_mutated_mutated",
-      "count": 53
+      "count": 44
     },
     {
       "genome": "ATCGAATC_mutated_mutated_mutated",
-      "count": 7
+      "count": 4
     }
   ],
   "populationSnapshots": [
@@ -36,7 +36,19 @@
     [
       {
         "genome": "ATCGAATC",
-        "count": 7
+        "count": 8
+      }
+    ],
+    [
+      {
+        "genome": "ATCGAATC",
+        "count": 16
+      }
+    ],
+    [
+      {
+        "genome": "ATCGAATC",
+        "count": 31
       },
       {
         "genome": "ATCGAATC_mutated",
@@ -46,63 +58,53 @@
     [
       {
         "genome": "ATCGAATC",
-        "count": 14
+        "count": 56
       },
       {
         "genome": "ATCGAATC_mutated",
+        "count": 8
+      }
+    ],
+    [
+      {
+        "genome": "ATCGAATC",
+        "count": 106
+      },
+      {
+        "genome": "ATCGAATC_mutated",
+        "count": 20
+      },
+      {
+        "genome": "ATCGAATC_mutated_mutated",
         "count": 2
       }
     ],
     [
       {
         "genome": "ATCGAATC",
-        "count": 27
+        "count": 201
       },
       {
         "genome": "ATCGAATC_mutated",
-        "count": 5
-      }
-    ],
-    [
-      {
-        "genome": "ATCGAATC",
-        "count": 53
-      },
-      {
-        "genome": "ATCGAATC_mutated",
-        "count": 10
-      },
-      {
-        "genome": "ATCGAATC_mutated_mutated",
-        "count": 1
-      }
-    ],
-    [
-      {
-        "genome": "ATCGAATC",
-        "count": 102
-      },
-      {
-        "genome": "ATCGAATC_mutated",
-        "count": 23
-      },
-      {
-        "genome": "ATCGAATC_mutated_mutated",
-        "count": 3
-      }
-    ],
-    [
-      {
-        "genome": "ATCGAATC",
-        "count": 195
-      },
-      {
-        "genome": "ATCGAATC_mutated",
-        "count": 54
+        "count": 49
       },
       {
         "genome": "ATCGAATC_mutated_mutated",
         "count": 6
+      }
+    ],
+    [
+      {
+        "genome": "ATCGAATC",
+        "count": 382
+      },
+      {
+        "genome": "ATCGAATC_mutated",
+        "count": 112
+      },
+      {
+        "genome": "ATCGAATC_mutated_mutated",
+        "count": 17
       },
       {
         "genome": "ATCGAATC_mutated_mutated_mutated",
@@ -112,37 +114,19 @@
     [
       {
         "genome": "ATCGAATC",
-        "count": 373
+        "count": 716
       },
       {
         "genome": "ATCGAATC_mutated",
-        "count": 117
+        "count": 260
       },
       {
         "genome": "ATCGAATC_mutated_mutated",
-        "count": 20
+        "count": 44
       },
       {
         "genome": "ATCGAATC_mutated_mutated_mutated",
-        "count": 2
-      }
-    ],
-    [
-      {
-        "genome": "ATCGAATC",
-        "count": 699
-      },
-      {
-        "genome": "ATCGAATC_mutated",
-        "count": 265
-      },
-      {
-        "genome": "ATCGAATC_mutated_mutated",
-        "count": 53
-      },
-      {
-        "genome": "ATCGAATC_mutated_mutated_mutated",
-        "count": 7
+        "count": 4
       }
     ]
   ]
