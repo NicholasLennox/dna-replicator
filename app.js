@@ -68,7 +68,7 @@ async function main() {
     let populationDistribution = countGroupings(population);
 
     // Total count
-    let totalCount = populationDistribution.reduce((total, group) => total += group.count);
+    let totalCount = populationDistribution.reduce((total, group) => total += group.count, 0);
 
 
     // Log file details

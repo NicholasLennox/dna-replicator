@@ -1,0 +1,457 @@
+{
+  "date": "2025-11-06T14-24.json",
+  "totalReplicators": 1024,
+  "distictReplicators": 26,
+  "finalDistribution": [
+    {
+      "genome": "ATCGAATC",
+      "count": 799
+    },
+    {
+      "genome": "AACGAATC",
+      "count": 117
+    },
+    {
+      "genome": "ATCTAATC",
+      "count": 20
+    },
+    {
+      "genome": "ATCCAATC",
+      "count": 16
+    },
+    {
+      "genome": "CTCGAATC",
+      "count": 18
+    },
+    {
+      "genome": "ATCGATTC",
+      "count": 8
+    },
+    {
+      "genome": "TTCGAATC",
+      "count": 5
+    },
+    {
+      "genome": "AGCGAATC",
+      "count": 5
+    },
+    {
+      "genome": "CACGAATC",
+      "count": 4
+    },
+    {
+      "genome": "ATCGAATT",
+      "count": 4
+    },
+    {
+      "genome": "AACGAAGC",
+      "count": 4
+    },
+    {
+      "genome": "ATCGAATCA",
+      "count": 2
+    },
+    {
+      "genome": "ATCGTATC",
+      "count": 4
+    },
+    {
+      "genome": "ATAGAATC",
+      "count": 2
+    },
+    {
+      "genome": "ATCGAATCG",
+      "count": 2
+    },
+    {
+      "genome": "ATCGAACC",
+      "count": 3
+    },
+    {
+      "genome": "ATCGAAAC",
+      "count": 1
+    },
+    {
+      "genome": "AGCGAAGC",
+      "count": 1
+    },
+    {
+      "genome": "AACGAACC",
+      "count": 1
+    },
+    {
+      "genome": "ATGGAATC",
+      "count": 1
+    },
+    {
+      "genome": "ATCCAATA",
+      "count": 1
+    },
+    {
+      "genome": "ACCGAATC",
+      "count": 2
+    },
+    {
+      "genome": "ATCGAATG",
+      "count": 1
+    },
+    {
+      "genome": "ATCAAATC",
+      "count": 1
+    },
+    {
+      "genome": "ATTGAATC",
+      "count": 1
+    },
+    {
+      "genome": "ATCGCATC",
+      "count": 1
+    }
+  ],
+  "populationSnapshots": [
+    {
+      "epoch": 1,
+      "groups": 1,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "epoch": 2,
+      "groups": 1,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "epoch": 3,
+      "groups": 2,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 7
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 4,
+      "groups": 2,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 14
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "epoch": 5,
+      "groups": 2,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 28
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "epoch": 6,
+      "groups": 5,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 53
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 8
+        },
+        {
+          "genome": "ATCTAATC",
+          "count": 1
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 1
+        },
+        {
+          "genome": "CTCGAATC",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 7,
+      "groups": 6,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 105
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 16
+        },
+        {
+          "genome": "ATCTAATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 2
+        },
+        {
+          "genome": "CTCGAATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGATTC",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 8,
+      "groups": 11,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 207
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 30
+        },
+        {
+          "genome": "ATCTAATC",
+          "count": 4
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 4
+        },
+        {
+          "genome": "CTCGAATC",
+          "count": 4
+        },
+        {
+          "genome": "ATCGATTC",
+          "count": 2
+        },
+        {
+          "genome": "TTCGAATC",
+          "count": 1
+        },
+        {
+          "genome": "AGCGAATC",
+          "count": 1
+        },
+        {
+          "genome": "CACGAATC",
+          "count": 1
+        },
+        {
+          "genome": "ATCGAATT",
+          "count": 1
+        },
+        {
+          "genome": "AACGAAGC",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 9,
+      "groups": 15,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 407
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 59
+        },
+        {
+          "genome": "ATCTAATC",
+          "count": 9
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 9
+        },
+        {
+          "genome": "CTCGAATC",
+          "count": 9
+        },
+        {
+          "genome": "ATCGATTC",
+          "count": 4
+        },
+        {
+          "genome": "TTCGAATC",
+          "count": 2
+        },
+        {
+          "genome": "AGCGAATC",
+          "count": 3
+        },
+        {
+          "genome": "CACGAATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGAATT",
+          "count": 2
+        },
+        {
+          "genome": "AACGAAGC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGAATCA",
+          "count": 1
+        },
+        {
+          "genome": "ATCGTATC",
+          "count": 1
+        },
+        {
+          "genome": "ATAGAATC",
+          "count": 1
+        },
+        {
+          "genome": "ATCGAATCG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 10,
+      "groups": 26,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 799
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 117
+        },
+        {
+          "genome": "ATCTAATC",
+          "count": 20
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 16
+        },
+        {
+          "genome": "CTCGAATC",
+          "count": 18
+        },
+        {
+          "genome": "ATCGATTC",
+          "count": 8
+        },
+        {
+          "genome": "TTCGAATC",
+          "count": 5
+        },
+        {
+          "genome": "AGCGAATC",
+          "count": 5
+        },
+        {
+          "genome": "CACGAATC",
+          "count": 4
+        },
+        {
+          "genome": "ATCGAATT",
+          "count": 4
+        },
+        {
+          "genome": "AACGAAGC",
+          "count": 4
+        },
+        {
+          "genome": "ATCGAATCA",
+          "count": 2
+        },
+        {
+          "genome": "ATCGTATC",
+          "count": 4
+        },
+        {
+          "genome": "ATAGAATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGAATCG",
+          "count": 2
+        },
+        {
+          "genome": "ATCGAACC",
+          "count": 3
+        },
+        {
+          "genome": "ATCGAAAC",
+          "count": 1
+        },
+        {
+          "genome": "AGCGAAGC",
+          "count": 1
+        },
+        {
+          "genome": "AACGAACC",
+          "count": 1
+        },
+        {
+          "genome": "ATGGAATC",
+          "count": 1
+        },
+        {
+          "genome": "ATCCAATA",
+          "count": 1
+        },
+        {
+          "genome": "ACCGAATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGAATG",
+          "count": 1
+        },
+        {
+          "genome": "ATCAAATC",
+          "count": 1
+        },
+        {
+          "genome": "ATTGAATC",
+          "count": 1
+        },
+        {
+          "genome": "ATCGCATC",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}
