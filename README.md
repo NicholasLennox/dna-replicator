@@ -56,3 +56,9 @@ Everything else — survival, mutation, selection — emerges from how those rul
    `"ATCG"` → `"ATCGCG"`
 
 Each of these increases or decreases the length.
+
+## TODOs
+
+- Replicator death
+- Replicator birth rate and chance
+- Environment saftey factor influencing birth rates and chance to randomly die

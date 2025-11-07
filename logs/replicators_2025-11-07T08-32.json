@@ -1,0 +1,299 @@
+{
+  "date": "2025-11-07T08-32.json",
+  "totalReplicators": 270,
+  "distictReplicators": 14,
+  "finalDistribution": [
+    {
+      "genome": "ATCGAATC",
+      "count": 220
+    },
+    {
+      "genome": "AACGAATC",
+      "count": 11
+    },
+    {
+      "genome": "ATCCAATC",
+      "count": 11
+    },
+    {
+      "genome": "ATCGCATC",
+      "count": 7
+    },
+    {
+      "genome": "ATCGACTC",
+      "count": 4
+    },
+    {
+      "genome": "ATCGTATC",
+      "count": 4
+    },
+    {
+      "genome": "ATCGAATG",
+      "count": 2
+    },
+    {
+      "genome": "ATAGAATC",
+      "count": 2
+    },
+    {
+      "genome": "ATCGAAAC",
+      "count": 2
+    },
+    {
+      "genome": "ATCGAGTC",
+      "count": 3
+    },
+    {
+      "genome": "AACGAGTC",
+      "count": 1
+    },
+    {
+      "genome": "ATCCGATC",
+      "count": 1
+    },
+    {
+      "genome": "AGCGAATC",
+      "count": 1
+    },
+    {
+      "genome": "ATCGAATCG",
+      "count": 1
+    }
+  ],
+  "populationSnapshots": [
+    {
+      "epoch": 1,
+      "groups": 1,
+      "total": 2,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "epoch": 2,
+      "groups": 1,
+      "total": 4,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "epoch": 3,
+      "groups": 1,
+      "total": 6,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "epoch": 4,
+      "groups": 1,
+      "total": 12,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "epoch": 5,
+      "groups": 1,
+      "total": 20,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "epoch": 6,
+      "groups": 2,
+      "total": 32,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 31
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 7,
+      "groups": 4,
+      "total": 54,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 49
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGCATC",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 8,
+      "groups": 7,
+      "total": 94,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 81
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 4
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 4
+        },
+        {
+          "genome": "ATCGCATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGACTC",
+          "count": 1
+        },
+        {
+          "genome": "ATCGAACC",
+          "count": 1
+        },
+        {
+          "genome": "ATCGTATC",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 9,
+      "groups": 9,
+      "total": 160,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 134
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 8
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 8
+        },
+        {
+          "genome": "ATCGCATC",
+          "count": 3
+        },
+        {
+          "genome": "ATCGACTC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGTATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGAATG",
+          "count": 1
+        },
+        {
+          "genome": "ATAGAATC",
+          "count": 1
+        },
+        {
+          "genome": "ATCGAAAC",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "epoch": 10,
+      "groups": 14,
+      "total": 270,
+      "groupsDetails": [
+        {
+          "genome": "ATCGAATC",
+          "count": 220
+        },
+        {
+          "genome": "AACGAATC",
+          "count": 11
+        },
+        {
+          "genome": "ATCCAATC",
+          "count": 11
+        },
+        {
+          "genome": "ATCGCATC",
+          "count": 7
+        },
+        {
+          "genome": "ATCGACTC",
+          "count": 4
+        },
+        {
+          "genome": "ATCGTATC",
+          "count": 4
+        },
+        {
+          "genome": "ATCGAATG",
+          "count": 2
+        },
+        {
+          "genome": "ATAGAATC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGAAAC",
+          "count": 2
+        },
+        {
+          "genome": "ATCGAGTC",
+          "count": 3
+        },
+        {
+          "genome": "AACGAGTC",
+          "count": 1
+        },
+        {
+          "genome": "ATCCGATC",
+          "count": 1
+        },
+        {
+          "genome": "AGCGAATC",
+          "count": 1
+        },
+        {
+          "genome": "ATCGAATCG",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

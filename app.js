@@ -7,8 +7,11 @@ function remakeFolder(path) {
     fs.mkdirSync(path);
 }
 
-function createReplicatorZero() {
-    return new Replicator('ATCGAATC', 0.05);
+function createReplicatorZero(safteyFactor) {
+    return new Replicator({ 
+        mutationRate: 0.05, 
+        saftey: safteyFactor 
+    });
 }
 
 function toggleLog(message, ...optionalParams) {
@@ -24,19 +27,25 @@ async function main() {
     const logsDir = path.join(__dirname, 'logs');
     remakeFolder(logsDir);
 
+    // Total epochs
+    const NUM_EPOCH = 10;
+
+    // Delay in printing epoch number
+    const DRAMA_EFFECT = 100;
+
+    // Max replicas (environment setting)
+    const MAX_REPLICAS = 1000;
+
+    // Environment saftey factor (1 - chance to randomly die in an epoch)
+    const SAFTEY_FACTOR = 0.9; // 0.9 = 90% chance to survive epoch
+
     // Create initial replicator
-    let replicatorZero = createReplicatorZero();
+    let replicatorZero = createReplicatorZero(SAFTEY_FACTOR);
 
     // Create a structure to hold the population
     const population = [];
     const populationSnapshots = []; // each epochs distribution
     population.push(replicatorZero);
-
-    // Epochs
-    const NUM_EPOCH = 10;
-
-    // Delay in printing epoch number
-    const DRAMA_EFFECT = 100;
 
     for (let i = 1; i <= NUM_EPOCH; i++) {
 
@@ -47,12 +56,24 @@ async function main() {
             Any items you push during the iteration are ignored for that run.
             (if you use for(int i, ...) then it would infinitely loop since it rechecks)
         */
+
+        // Only replicate if there is space in the environment
         population.forEach(replicator => {
-            population.push(replicator.replicate());
+            // First check if the replicator survived the epoch
+            if (replicator.trySurviveEpoch()) {
+                // If there is space, they can replicate
+                if (population.length < MAX_REPLICAS) {
+                    population.push(replicator.replicate());
+                }
+            } else {
+                // If it doesn#t survive, remove it from the list
+                population.splice(population.findIndex(r => r === replicator), 1);
+                // console.log(replicator);
+            }
         });
 
         // Snapshot population distribution
-        populationSnapshots.push({epoch: i, groups: countGroupings(population)});
+        populationSnapshots.push({ epoch: i, groups: countGroupings(population) });
 
         // Pause for dramatic effect
         await new Promise(r => setTimeout(r, DRAMA_EFFECT));
@@ -79,7 +100,7 @@ async function main() {
         totalReplicators: totalCount,
         distictReplicators: populationDistribution.length,
         finalDistribution: populationDistribution,
-        populationSnapshots: populationSnapshots.map(snapshot => ({ epoch: snapshot.epoch, groups: snapshot.groups.length, groupsDetails: snapshot.groups })),
+        populationSnapshots: populationSnapshots.map(snapshot => ({ epoch: snapshot.epoch, groups: snapshot.groups.length, total: snapshot.groups.reduce((total, group) => total += group.count, 0), groupsDetails: snapshot.groups })),
     };
     fs.writeFileSync(pathToLogFile, JSON.stringify(formattedLog, null, 2));
 
@@ -97,7 +118,7 @@ function countGroupings(populationArr) {
             isNaN(currVal) ? 1 : currVal + 1
         )
     })
-    return Array.from(groupingsMap, ([key, value]) => ({genome: key, count: value}))
+    return Array.from(groupingsMap, ([key, value]) => ({ genome: key, count: value }))
 }
 
 main()
